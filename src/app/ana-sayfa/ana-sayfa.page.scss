@@ -1,0 +1,154 @@
+ion-item {
+    --padding-start: 0;
+  }
+
+  ion-content {
+    --background: #086568;
+    --color: #000000;
+  }
+
+  .cstmCardGame{
+      background-image: url('/assets/icon/gametheme1.png');
+      background-color: rgba(37, 24, 46, 0.842); 
+      background-blend-mode:multiply;
+      background-size: cover;
+      background-position: center;
+    
+  }
+
+  .cstmCardMath{
+    background-image: url('/assets/icon/mathbg3.png');
+    background-color: rgba(37, 24, 46, 0.842); 
+    background-blend-mode:multiply;
+    background-size: cover;
+    background-position: center; 
+  }
+
+  .cstmCardPersonalGrowth{
+    background-image: url('/assets/icon/personelgrowthicon2.png');
+    background-color: rgba(37, 24, 46, 0.842); 
+    background-blend-mode:multiply;
+    background-size: cover;
+    background-position: center; 
+  }
+
+  .cstmWritingForGame{
+    color: #FFFF00;
+  }
+
+  .image-card {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .card-content-wrapper {
+    flex-grow: 1;
+  }
+
+  ion-header{
+    background-color: rgba(1, 9, 22, 0.466)
+  }
+
+  ion-title{
+    color:rgb(56, 128, 255)
+  }
+  
+  ion-card-header,
+  ion-card-content {
+    flex-basis: 0;
+  }
+  
+  ion-img {
+    margin-top: 30px; 
+    margin-right: 10px;
+    width: 270px; 
+    height: auto; 
+    align-self: flex-start;
+  }
+  
+  
+  
+  
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.video-modal {
+  --ion-safe-area-top: 0;
+  --ion-safe-area-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+}
+
+.video-modal .modal-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal .modal-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

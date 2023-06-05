@@ -1,0 +1,152 @@
+
+  /*
+  .board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .board::before,
+  .board::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+  }
+  
+  .board::before {
+    top: calc(33.33% - 1px);
+    bottom: calc(66.66% - 1px);
+    left: 0;
+    right: 0;
+  }
+  
+  .board::after {
+    top: 0;
+    bottom: 0;
+    left: calc(33.33% - 1px);
+    right: calc(66.66% - 1px);
+  }
+  
+  .board table {
+    width: 100%;
+    height: 100%;
+  }
+  
+  tr:not(:last-child) td {
+    border-bottom: 2px solid black;
+  }
+  
+  td:not(:last-child) {
+    border-right: 2px solid black;
+  }
+  
+  td {
+    text-align: center;
+    background-color: lightgray;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    padding: 0;
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  */
+
+  ion-header{
+    background-color: #086164;
+  }
+  
+  ion-title{
+    color:rgb(140, 26, 168)
+  }
+
+  .board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 412px;
+    height: 100%;
+    max-height: 550px;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .board::before,
+  .board::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+  }
+  
+  .board::before {
+    top: calc(33.33% - 1px);
+    bottom: calc(66.66% - 1px);
+    left: 0;
+    right: 0;
+  }
+  
+  .board::after {
+    top: 0;
+    bottom: 0;
+    left: calc(33.33% - 1px);
+    right: calc(66.66% - 1px);
+  }
+  
+  .board table {
+    width: 100%;
+    height: 100%;
+  }
+  
+  tr:not(:last-child) td {
+    border-bottom: 2px solid black;
+  }
+  
+  td:not(:last-child) {
+    border-right: 2px solid black;
+  }
+  
+  td {
+    text-align: center;
+    background-color: lightgray;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    padding: 0;
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  

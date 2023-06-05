@@ -1,0 +1,27 @@
+ion-textarea {
+    --min-height: 32px;
+    --padding-top: 6px;
+    --padding-bottom: 6px;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
+  ion-item {
+  --min-height: unset !important;
+  --padding-top: 0 !important;
+  --padding-bottom: 0 !important;
+}
+
+ion-input {
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+
+ion-header{
+  background-color: #086164;
+}
+
+ion-title{
+  color:rgb(140, 26, 168)
+}

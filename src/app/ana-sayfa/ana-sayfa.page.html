@@ -1,0 +1,121 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Hoşgeldiniz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--
+<ion-segment [scrollable]="true" value="heart">
+  <ion-segment-button value="home">
+    <ion-icon name="home"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="star">
+    <ion-icon name="star"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="call">
+    <ion-icon name="call"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="globe">
+    <ion-icon name="globe"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="basket">
+    <ion-icon name="basket"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="barbell">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="person">
+    <ion-icon name="person"></ion-icon>
+  </ion-segment-button>
+</ion-segment> -->
+
+
+<ion-content>
+  <ion-card class="image-card cstmCardGame"  (click)="goToXoxGame()">
+    <div class="card-content-wrapper">
+      <ion-card-header>
+        <ion-card-title class="cstmWritingForGame">XOX</ion-card-title>
+        <ion-card-subtitle class="cstmWritingForGame">Kategori: Oyun</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="cstmWritingForGame">
+        2 kişilik bir strateji oyunudur. İlk başlayan oyuncu boş bir kareye “X” , diğer oyuncuda boş karelerden birine “O” yazarak hamlelerini sırasıyla yaparlar. Bu durumda önceki oyunda ilk başlamayan oyuncu yeni oyuna ilk olarak başlar.
+      </ion-card-content>
+    </div>
+    <ion-img src="assets\icon\tic-tac-toe.png"></ion-img>
+  </ion-card>
+  
+
+  <ion-card class="image-card cstmCardGame"  (click)="goToGame2048()">
+    <div class="card-content-wrapper">
+      <ion-card-header>
+        <ion-card-title class="cstmWritingForGame">2048</ion-card-title>
+        <ion-card-subtitle class="cstmWritingForGame">Kategori: Oyun</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="cstmWritingForGame">
+        İtalyan uygulama geliştiricisi Gabriele Cirulli tarafından geliştirilen 2048 oyununda amaç ekrandaki 16 karede yer alan rakamları birbirleriyle birleştirerek 2048 rakamına ulaşmak.
+      </ion-card-content>
+    </div>
+    <ion-img src="assets\icon\2048logo1.png"></ion-img>
+  </ion-card>
+
+
+  <ion-card class="image-card cstmCardGame"  (click)="goToMemoryGame()">
+    <div class="card-content-wrapper">
+      <ion-card-header>
+        <ion-card-title class="cstmWritingForGame">Hafıza Kartları</ion-card-title>
+        <ion-card-subtitle class="cstmWritingForGame">Kategori: Oyun</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="cstmWritingForGame">
+        genellikle eğlence ve zeka gelişimi amacıyla oynanan bir kart eşleştirme oyunudur. Bu oyun, genellikle çocuklar ve yetişkinler arasında popülerdir.
+        Oyunda genellikle bir dizi kart kullanılır. Her kartın üzerinde bir çift resim, desen veya sembol bulunur. Oyuncuların amacı, kartların üzerindeki resimlerin yerlerini ve eşleşen çiftleri hatırlayarak, kartları doğru şekilde eşleştirmektir.
+      </ion-card-content>
+    </div>
+    <ion-img src="assets\icon\memorygameicon3.png"></ion-img>
+  </ion-card>
+
+
+  <ion-card class="image-card cstmCardMath"  (click)="goToScientificCalculator()">
+    <div class="card-content-wrapper">
+      <ion-card-header>
+        <ion-card-title class="cstmWritingForGame">Hesap Makinesi</ion-card-title>
+        <ion-card-subtitle class="cstmWritingForGame">Kategori: Matematik</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="cstmWritingForGame">
+        Bilimsel Hesap Makinesi, temel dört işlemi (toplama, çıkarma, çarpma, bölme) gerçekleştirebilirken, aynı zamanda karmaşık matematiksel işlemleri yapabilme yeteneğine sahip bir elektronik cihazdır. Üstel fonksiyonlar, trigonometri, logaritma, karekök alma gibi ileri matematiksel işlemleri de kolaylıkla yapabilir. Bilimsel hesap makinesi, mühendisler, bilim insanları ve matematik öğrencileri gibi daha karmaşık hesaplamaları hızlı ve doğru bir şekilde gerçekleştirmek için kullanılır.
+      </ion-card-content>
+    </div>
+    <ion-img src="assets\icon\calculatoricon2.png"></ion-img>
+  </ion-card>
+
+
+  <ion-card class="image-card cstmCardPersonalGrowth"  (click)="goToTodoList()">
+    <div class="card-content-wrapper">
+      <ion-card-header>
+        <ion-card-title class="cstmWritingForGame">ToDo List</ion-card-title>
+        <ion-card-subtitle class="cstmWritingForGame">Kategori: Kişisel Gelişim</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="cstmWritingForGame">
+        bireyin kendini geliştirme, öğrenme ve kişisel hedeflerini gerçekleştirme konularına odaklanır.kişisel gelişim alanında yapılacak görevlerin bir listesini oluşturarak, bireylerin kendilerini geliştirmelerine ve hedeflerine ulaşmalarına yardımcı olur.
+      </ion-card-content>
+    </div>
+    <ion-img src="assets\icon\todolisticon1.png"></ion-img>
+  </ion-card>
+
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="logo-instagram" (click)="goToSocialMediaInstagram()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="compass" (click)="goToInformationAboutMaker()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab> 
+
+</ion-content>
+

@@ -1,0 +1,125 @@
+
+ion-header{
+  background-color: #086164;
+}
+
+ion-title{
+  color:rgb(140, 26, 168)
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-board {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #bbada0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.tile-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tile-empty {
+  background-color: #dbd0c4;
+}
+
+.tile-0{
+  background-color: #cdc1b4;
+}
+
+.tile-2 {
+  background-color: #eee4da;
+  color: #776e65;
+}
+
+.tile-4 {
+  background-color: #ede0c8;
+  color: #776e65;
+}
+
+.tile-8 {
+  background-color: #f2b179;
+  color: #f9f6f2;
+}
+
+.tile-16 {
+  background-color: #f59563;
+  color: #f9f6f2;
+}
+
+.tile-32 {
+  background-color: #f67c5f;
+  color: #f9f6f2;
+}
+
+.tile-64 {
+  background-color: #f65e3b;
+  color: #f9f6f2;
+}
+
+.tile-128 {
+  background-color: #edcf72;
+  color: #f9f6f2;
+}
+
+.tile-256 {
+  background-color: #edcc61;
+  color: #f9f6f2;
+}
+
+.tile-512 {
+  background-color: #edc850;
+  color: #f9f6f2;
+}
+
+.tile-1024 {
+  background-color: #edc53f;
+  color: #f9f6f2;
+}
+
+.tile-2048 {
+  background-color: #edc22e;
+  color: #f9f6f2;
+}
+
+.game-over {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 8px;
+}

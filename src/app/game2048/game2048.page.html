@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      2048 Game
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="game-container">
+    <div class="game-board">
+      <div class="score">Score: {{ score }}</div>
+      <div class="game-over" *ngIf="gameOver">Game Over!</div>
+      <div class="tile-row" *ngFor="let row of tiles">
+        <div class="tile-col" *ngFor="let tile of row">
+          <div class="tile" [ngClass]="'tile-' + (tile?.value || 0)">{{ tile?.value }}</div>
+        </div>
+      </div>
+    </div>
+    <ion-button expand="full" color="primary" (click)="resetGame()">Yeniden Oyna</ion-button>
+  </div>
+</ion-content>

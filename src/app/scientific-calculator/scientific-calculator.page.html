@@ -1,0 +1,191 @@
+<ion-row>
+  <ion-col size="12">
+    <ion-input [(ngModel)]="display" readonly="true"></ion-input>
+  </ion-col>
+</ion-row>
+
+  <ion-grid class="calculator-grid" *ngIf="calculatorType === 'normal'">
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('7')">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('8')">8</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('9')">9</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('/')">÷</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('4')">4</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('5')">5</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('6')">6</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('*')">x</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('1')">1</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('2')">2</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('3')">3</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('.')">.</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('0')">0</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('+')">+</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="clearDisplay()">C</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" fill="solid" shape="round" color="primary" (click)="calculateResult()">=</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onDeleteClicked()">Sil</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--hesap makinesi tuşları-->
+  </ion-grid>
+
+  <ion-grid class="calculator-grid" *ngIf="calculatorType === 'scientific'">
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('7')">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('8')">8</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('9')">9</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('/')">÷</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('4')">4</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('5')">5</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('6')">6</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('*')">x</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('1')">1</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('2')">2</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('3')">3</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('.')">.</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('0')">0</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onOperatorClicked('+')">+</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="clearDisplay()">C</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" fill="solid" shape="round" color="primary" (click)="calculateResult()">=</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onDeleteClicked()">Sil</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('(')">(</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked(')')">)</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('^')">^</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('Math.sqrt(')">√</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('Math.sin(')">sin</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('Math.cos(')">cos</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('Math.tan(')">tan</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" fill="outline" shape="round" (click)="onButtonClicked('Math.log(')">log</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--bilimsel hesap makinesi tuşları-->
+  </ion-grid>
+
+  
+  <ion-content>
+    <ion-segment [(ngModel)]="calculatorType">
+      <ion-segment-button value="normal">
+        Hesap Makinesi
+      </ion-segment-button>
+      <ion-segment-button value="scientific">
+        Bilimsel Hesap Makinesi
+      </ion-segment-button>
+    </ion-segment>
+  <!--ortak eklenenler-->
+</ion-content>
+
