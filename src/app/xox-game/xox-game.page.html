@@ -1,3 +1,4 @@
+<!--
 <ion-header>
     <ion-toolbar>
       <ion-title>
@@ -33,6 +34,44 @@
       Yeniden Oyna
     </ion-button>
   </ion-content>
+-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header-title">
+      XOX Game
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="board">
+    <table>
+      <tr>
+        <td (click)="cellClicked(0, 0)" [ngStyle]="{ 'background-color': cells[0][0] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[0][0] }}</td>
+        <td (click)="cellClicked(0, 1)" [ngStyle]="{ 'background-color': cells[0][1] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[0][1] }}</td>
+        <td (click)="cellClicked(0, 2)" [ngStyle]="{ 'background-color': cells[0][2] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[0][2] }}</td>
+      </tr>
+      <tr>
+        <td (click)="cellClicked(1, 0)" [ngStyle]="{ 'background-color': cells[1][0] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[1][0] }}</td>
+        <td (click)="cellClicked(1, 1)" [ngStyle]="{ 'background-color': cells[1][1] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[1][1] }}</td>
+        <td (click)="cellClicked(1, 2)" [ngStyle]="{ 'background-color': cells[1][2] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[1][2] }}</td>
+      </tr>
+      <tr>
+        <td (click)="cellClicked(2, 0)" [ngStyle]="{ 'background-color': cells[2][0] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[2][0] }}</td>
+        <td (click)="cellClicked(2, 1)" [ngStyle]="{ 'background-color': cells[2][1] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[2][1] }}</td>
+        <td (click)="cellClicked(2, 2)" [ngStyle]="{ 'background-color': cells[2][2] ? 'rgba(255, 255, 255, 0.2)' : '' }">{{ cells[2][2] }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="result" *ngIf="gameEnded">{{ resultMessage }}</div>
+
+  <ion-button expand="full" color="primary" (click)="resetGame()" *ngIf="gameEnded">
+    Yeniden Oyna
+  </ion-button>
+</ion-content>
+
 
 
 
